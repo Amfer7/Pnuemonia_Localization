@@ -19,24 +19,18 @@ This project is an end-to-end deep learning solution for detecting pneumonia fro
 
 Follow these steps to set up the project environment.
 
-    Clone the repository:
-    Bash
-
-git clone <your-repository-url>
+Clone the repository: git clone <your-repository-url>
 cd <repository-folder>
 
-Create and activate a virtual environment (recommended):
-Bash
+Add a raw_data folder and add your raw data from kaggle's rsna dataset.
 
-python -m venv venv
+Create and activate a virtual environment (recommended): python -m venv venv OR conda
 # On Windows
 venv\Scripts\activate
 # On macOS/Linux
 source venv/bin/activate
 
 Install the dependencies:
-Bash
-
     pip install -r requirements.txt
 
 ⚙️ Usage
@@ -44,7 +38,6 @@ Bash
 1. Data Preprocessing
 
 Before training, you must process the raw DICOM images into PNGs and split them into train/validation/test sets. Place your raw data (stage_2_train_labels.csv and stage_2_train_images directory) into a raw_data folder as specified in config.py.
-Bash
 
 python data_preprocessing.py
 
@@ -53,21 +46,18 @@ This will create a data directory with the processed images.
 2. Model Training
 
 To train the model, run the training script. The best model weights will be saved in the saved_models directory.
-Bash
 
 python train.py
 
 3. Model Evaluation
 
 To evaluate the trained model on the test set and see a sample CAM visualization, run the evaluation script.
-Bash
 
 python evaluate.py
 
 4. Running the Web Application
 
 To start the interactive web application, run the Flask app.
-Bash
 
 python app.py
 
