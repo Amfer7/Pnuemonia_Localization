@@ -1,4 +1,4 @@
-Pneumonia Detection with Explainable AI
+Pneumonia Detection and Predictions
 
 This project is an end-to-end deep learning solution for detecting pneumonia from chest X-ray images. It features a custom 10-layer Convolutional Neural Network (CNN) and an interactive web application built with Flask. The application uses Explainable AI (XAI) techniques, specifically Grad-CAM, to generate heatmaps that visually highlight areas of interest in the X-ray, providing transparency for the model's predictions.
 
@@ -14,20 +14,6 @@ This project is an end-to-end deep learning solution for detecting pneumonia fro
 
     Balanced Dataset: The preprocessing script balances the dataset to prevent model bias towards a specific class.
 
-📂 Project Structure
-
-.
-├── app.py                  # Flask web application for inference
-├── config.py               # Configuration settings (paths, image size, etc.)
-├── data_preprocessing.py   # Script to process and prepare the dataset
-├── evaluate.py             # Script to evaluate the model and generate CAM
-├── model.py                # Defines the CNN architecture
-├── requirements.txt        # Project dependencies
-├── train.py                # Script to train the CNN model
-├── raw_data/               # Directory for raw DICOM images and labels (not included)
-├── data/                   # Directory for processed PNG images (created by data_preprocessing.py)
-├── saved_models/           # Directory for saved model weights (created by train.py)
-└── static/                 # Directory for web app assets (uploads, predictions)
 
 🛠️ Setup and Installation
 
