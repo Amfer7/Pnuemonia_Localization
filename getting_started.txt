@@ -1,0 +1,14 @@
+How to run this project:
+
+Terminal
+1. Create a local conda environment with Python 3.11 installed. (Local: Run 'conda activate pnuemonia_env')
+2. Install all the dependencies in "requirements.txt".
+3. Make sure the dataset is loaded in and not corrupted.
+4. Run 'python -m src.data_preprocessing' to process the raw data.
+5. Then run 'python -m src.train' to train the model.
+6. (Optional) Run 'python -m src.evaluate' to run the model on the test set and view Classification report.
+7. Finally, run 'python app.py' and open http://127.0.0.1:5000 in your browser.
+
+GUI
+1. Upload the desired image to test from your files through the "Browse" button
+2. Click on the "Analyze" button to get the output.
